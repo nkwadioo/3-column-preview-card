@@ -1,0 +1,83 @@
+$clr-orange: hsl(31, 77%, 52%);
+$clr-cyan: hsl(184, 100%, 22%);
+$clr-dark-cyan: hsl(179, 100%, 13%);
+
+$clr-off-white: hsla(0, 0%, 100%, 0.75);
+$clr-gray: hsl(0, 0%, 95%);
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+/*
+font-family: 'Big Shoulders Display', cursive;
+font-family: 'Lexend Deca', sans-serif;
+*/
+
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+    font-family: 'Lexend Deca', sans-serif;
+    // line-height: 1px;
+}
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0 ;
+}
+
+body {
+    padding: 2rem;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 1fr;
+    color:hsl(0, 0%, 95%);
+    
+    .card {
+        min-height: 350px;
+        padding: 70px 74px;
+
+        img {
+            width: 100px;
+        }
+        h1 {
+            margin: 40px 0;
+            font-family: 'Big Shoulders Display', cursive;
+            font-size: 4.2rem;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 1.6rem;
+            color: $clr-off-white;
+        }
+
+        button {
+            border: none;
+            outline: none;
+            font-size: 1.4rem;
+            margin-top: 2rem;
+            padding: 1rem 3rem;
+            color: $clr-orange;
+            border-radius: 50px;
+        }
+
+        &:first-child {
+            border-radius: 10px 10px 0 0;
+        }
+        &:last-child {
+            border-radius: 0 0 10px 10px;
+        }
+        &.sedan {
+            background-color: $clr-orange;
+        }
+
+        &.suvs {
+            background-color: $clr-cyan;
+        }
+
+        &.luxury {
+            background-color: $clr-dark-cyan;
+        }
+    }
+}
