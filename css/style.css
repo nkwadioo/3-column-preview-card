@@ -29,54 +29,114 @@ main {
   color: #f2f2f2;
 }
 
-main .card {
+.card {
   min-height: 350px;
-  padding: 70px 74px;
+  padding: 1.2rem 1.2rem;
 }
 
-main .card img {
-  width: 100px;
-}
-
-main .card h1 {
-  margin: 40px 0;
-  font-family: 'Big Shoulders Display', cursive;
-  font-size: 4.2rem;
-  text-transform: uppercase;
-}
-
-main .card p {
-  font-size: 1.6rem;
-  color: rgba(255, 255, 255, 0.75);
-}
-
-main .card button {
-  border: none;
-  outline: none;
-  font-size: 1.4rem;
-  margin-top: 2rem;
-  padding: 1rem 3rem;
-  color: #e38826;
-  border-radius: 50px;
-}
-
-main .card:first-child {
+.card:first-child {
   border-radius: 10px 10px 0 0;
 }
 
-main .card:last-child {
+.card:last-child {
   border-radius: 0 0 10px 10px;
 }
 
-main .card.sedan {
+.card.sedan {
   background-color: #e38826;
 }
 
-main .card.suvs {
+.card.sedan button {
+  color: #e38826;
+}
+
+.card.suvs {
   background-color: #006970;
 }
 
-main .card.luxury {
+.card.suvs button {
+  color: #006970;
+}
+
+.card.luxury {
   background-color: #004241;
+}
+
+.card.luxury button {
+  color: #004241;
+}
+
+img {
+  min-width: 50px;
+  width: 3rem;
+}
+
+h1 {
+  font-family: 'Big Shoulders Display', cursive;
+  font-size: 2rem;
+  text-transform: uppercase;
+  margin: 1.5rem 0;
+}
+
+p {
+  max-width: 26ch;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1rem;
+}
+
+button {
+  border: none;
+  outline: none;
+  border: 1px solid white;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  padding: 0.8rem 2rem;
+  margin-top: 1.8rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: transparent;
+  color: white !important;
+}
+
+@media (min-width: 290px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  .card {
+    padding: 2.2rem 2.2rem;
+  }
+}
+
+@media (min-width: 350px) {
+  main {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+  h1 {
+    font-size: 2.6rem;
+  }
+  img {
+    width: 4rem;
+  }
+  .card {
+    padding: 3.2rem 3.2rem;
+  }
+}
+
+@media (min-width: 920px) {
+  main {
+    margin-top: 170px;
+    max-width: 1000px;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+  .card:first-child {
+    border-radius: 10px 0 0 10px;
+  }
+  .card:last-child {
+    border-radius: 0 10px 10px 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */
