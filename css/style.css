@@ -138,5 +138,8 @@ button:hover {
   .card:last-child {
     border-radius: 0 10px 10px 0;
   }
+  button {
+    margin-top: 4rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */
